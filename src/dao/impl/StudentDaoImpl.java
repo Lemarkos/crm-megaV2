@@ -64,7 +64,7 @@ public class StudentDaoImpl implements StudentDao {
                 student.setLastName(scanner.next());
                 student.setPhone(scanner.next());
                 student.setEmail(scanner.nextLine());
-//                student.setDateCreated(LocalDateTime.parse(scanner.nextLine()));
+//                student.setDateCreated(scanner.nextLine());
                 students.add(i,student);
             }
         }catch (FileNotFoundException e){

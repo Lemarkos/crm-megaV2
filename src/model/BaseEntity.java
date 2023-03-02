@@ -19,6 +19,6 @@ public  abstract class BaseEntity {
     }
 
     public void setDateCreated(LocalDateTime dateCreated) {
-        this.dateCreated = dateCreated;
+        this.dateCreated = (dateCreated);
     }
 }

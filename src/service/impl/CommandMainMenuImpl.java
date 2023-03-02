@@ -66,9 +66,11 @@ public class CommandMainMenuImpl implements CommandMainMenu {
                             case STUDENT:
                                 System.out.println("searching student...");
                                 studentService.find();
+                                break;
                             case MENTOR:
                                 System.out.println("searching mentor...");
                                 mentorService.find();
+                                break;
                         }
                 }
             }
