@@ -1,14 +1,11 @@
 package dao.impl;
 
-import dao.MentorDao;
 import dao.StudentDao;
-import model.Mentor;
 import model.Student;
 
 import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -16,7 +13,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class StudentDaoImpl implements StudentDao {
-    private final String PATH_FILE = "/Users/sanjar/IdeaProjects/crm-megaV2/lib/Student.txt";
+    private final String PATH_FILE = "C:\\Users\\Home\\IdeaProjects\\Learning\\lib\\Student.txt";
     private final File STUDENT_FILE = new File(PATH_FILE);
     int count = 0;
 
@@ -29,6 +26,8 @@ public class StudentDaoImpl implements StudentDao {
                 e.printStackTrace();
             }
         }
+        if (isCreated)
+            System.out.println("New file is created!");
     }
 
     @Override

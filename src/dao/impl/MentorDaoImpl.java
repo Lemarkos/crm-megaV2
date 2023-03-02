@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class MentorDaoImpl implements MentorDao {
 
-    private final String PATH_FILE = "/Users/sanjar/IdeaProjects/crm-megaV2/lib/Mentor.txt";
+    private final String PATH_FILE = "C:\\Users\\Home\\IdeaProjects\\Learning\\lib\\Mentor.txt";
     private final File MENTOR_FILE = new File(PATH_FILE);
     int count = 0;
 
@@ -33,7 +33,7 @@ public class MentorDaoImpl implements MentorDao {
         count = getCount();
         PrintWriter out = null;
         try {
-            out = new PrintWriter(new FileOutputStream(PATH_FILE), true);
+            out = new PrintWriter(new FileOutputStream(PATH_FILE, true));
             out.print(++count + " ");
             out.print(mentor.getName() + " ");
             out.print(mentor.getLastName() + " ");
@@ -61,7 +61,7 @@ public class MentorDaoImpl implements MentorDao {
                 mentor.setLastName(scanner.next());
                 mentor.setPhone(scanner.next());
                 mentor.setEmail(scanner.nextLine());
-
+//                mentor.setDateCreated(LocalDateTime.parse(scanner.nextLine()));
                 mentors.add(i, mentor);
             }
         }catch (FileNotFoundException e){

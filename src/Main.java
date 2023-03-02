@@ -1,14 +1,13 @@
-import dao.StudentDao;
-import dao.impl.StudentDaoImpl;
-import model.Student;
 import service.CommandMainMenu;
+import service.CourseFormatService;
 import service.impl.CommandMainMenuImpl;
-
-import java.io.IOException;
+import service.impl.CourseFormatServiceImpl;
 
 public class Main {
     public static void main(String[] args)  {
         CommandMainMenu commandMainMenu = new CommandMainMenuImpl();
+        CourseFormatService courseFormatService = new CourseFormatServiceImpl();
+        courseFormatService.run();
         commandMainMenu.mainMenu();
     }
 }

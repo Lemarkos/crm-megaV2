@@ -1,6 +1,6 @@
 package service;
 
-public interface StudentService {
+public interface ManagerService {
     void run();
     void find();
 }

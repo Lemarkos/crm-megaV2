@@ -1,7 +1,5 @@
 package dao;
 
-import model.Student;
-
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +11,7 @@ public interface CrudDao <E> {
                 closeable.close();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     void save (E e) ;

@@ -1,9 +1,9 @@
 package model;
 
-import java.text.Format;
+import enums.Format;
 
-public class CourseFormat extends BaseEntity{
-    private Format format;
+public class CourseFormat extends BaseEntity {
+    private enums.Format format;
     private int duration;
     private boolean isOnline;
     private int lessonDuration;
@@ -15,10 +15,6 @@ public class CourseFormat extends BaseEntity{
 
     public void setFormat(Format format) {
         this.format = format;
-    }
-
-    public int getDuration() {
-        return duration;
     }
 
     public void setDuration(int duration) {
@@ -49,10 +45,15 @@ public class CourseFormat extends BaseEntity{
         this.lessonsInWeek = lessonsInWeek;
     }
 
+    public int getDuration() {
+        return duration;
+    }
+
     @Override
     public String toString() {
         return "CourseFormat{" +
-                "format=" + format +
+                "id='" + getId() + "\'" +
+                "format=" + format.getF() +
                 ", duration=" + duration +
                 ", isOnline=" + isOnline +
                 ", lessonDuration=" + lessonDuration +

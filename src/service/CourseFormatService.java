@@ -1,6 +1,6 @@
 package service;
 
-public interface StudentService {
+public interface CourseFormatService {
     void run();
     void find();
 }
